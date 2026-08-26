@@ -48,16 +48,6 @@ dependencies {
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
 
-    // Retrofit (for API)
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.gson)
-    implementation(libs.okhttp.logging)
-
-    // Room (database)
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    ksp(libs.androidx.room.compiler)
-
     // DataStore
     implementation(libs.androidx.datastore.preferences)
 
@@ -68,4 +58,14 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
+
+    // Unit Tests
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+
+    // Data Layer
+    implementation(project(":data"))
+
+    //Domain Layer
+    implementation(project(":domain"))
 }

@@ -24,3 +24,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Zenith"
 include(":app")
+include(":data")
+include(":domain")
