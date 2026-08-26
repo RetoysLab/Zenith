@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name" translatable="false">Zenith</string>
+    <string name="username_label">Username</string>
+    <string name="email_label">Email</string>
+    <string name="firstname_label">Name</string>
+    <string name="age_label">Age</string>
+    <string name="weight_label">Weight</string>
+    <string name="height_label">Height</string>
+    <string name="create_label">Create</string>
+</resources>
