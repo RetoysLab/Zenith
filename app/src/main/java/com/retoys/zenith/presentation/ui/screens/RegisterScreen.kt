@@ -1,4 +1,4 @@
-package com.retoys.zenith.presentation.ui.screens.auth
+package com.retoys.zenith.presentation.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*

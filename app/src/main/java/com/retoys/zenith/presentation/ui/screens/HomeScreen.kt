@@ -1,4 +1,4 @@
-package com.retoys.zenith.presentation.ui.screens.home
+package com.retoys.zenith.presentation.ui.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
