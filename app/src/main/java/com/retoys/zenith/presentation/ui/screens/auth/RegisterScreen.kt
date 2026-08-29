@@ -9,19 +9,19 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.retoys.zenith.presentation.viewmodels.auth.RegistrationViewModel
+import com.retoys.zenith.presentation.viewmodels.auth.RegisterViewModel
 import com.retoys.zenith.R
 
 @Composable
 fun RegistrationScreen(
     onProfileCreated: () -> Unit,
-    viewModel: RegistrationViewModel = hiltViewModel()
+    viewModel: RegisterViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
     LaunchedEffect(Unit) {
-        viewModel.events.collect { event: RegistrationViewModel.RegistrationEvent ->
-            if (event is RegistrationViewModel.RegistrationEvent.ProfileCreated) {
+        viewModel.events.collect { event: RegisterViewModel.RegistrationEvent ->
+            if (event is RegisterViewModel.RegistrationEvent.ProfileCreated) {
                 onProfileCreated()
             }
         }
@@ -41,7 +41,7 @@ fun RegistrationScreen(
 
 @Composable
 fun RegistrationScreenContent(
-    uiState: RegistrationViewModel.RegistrationUiState,
+    uiState: RegisterViewModel.RegistrationUiState,
     onUsernameChange: (String) -> Unit,
     onEmailChange: (String) -> Unit,
     onNameChange: (String) -> Unit,
@@ -121,7 +121,7 @@ fun RegistrationScreenContent(
 @Preview(showBackground = true, widthDp = 360, heightDp = 640)
 @Composable
 fun RegistrationScreenPreview() {
-    val previewState = RegistrationViewModel.RegistrationUiState(
+    val previewState = RegisterViewModel.RegistrationUiState(
         username = "john_doe",
         email = "john@example.com",
         name = "John",
