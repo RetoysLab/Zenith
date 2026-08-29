@@ -1,16 +1,16 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
 }
 
 android {
-    namespace = "com.retoys.zenith"
-    compileSdk {
-        version = release(37)
-    }
+    namespace = "com.retoys.zenith.data"
+
+    compileSdk = 37
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 23
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
