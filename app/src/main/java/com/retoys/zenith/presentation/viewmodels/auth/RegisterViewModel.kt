@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class RegistrationViewModel @Inject constructor(
+class RegisterViewModel @Inject constructor(
     private val createUserUseCase: CreateUserUseCase
 ) : ViewModel() {
 
