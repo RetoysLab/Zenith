@@ -2,9 +2,8 @@ package com.retoys.zenith.domain.usecase
 
 import com.retoys.zenith.domain.model.User
 import com.retoys.zenith.domain.repository.UserRepository
-import javax.inject.Inject
 
-class CreateUserUseCase @Inject constructor(
+class CreateUserUseCase(
     private val repository: UserRepository
 ) {
     suspend operator fun invoke(
