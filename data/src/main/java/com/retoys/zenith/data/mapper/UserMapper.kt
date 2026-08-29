@@ -4,7 +4,7 @@ import com.retoys.zenith.data.local.database.entity.UserEntity
 import com.retoys.zenith.domain.model.User
 
 fun UserEntity.toDomain(): User = User(
-    //For Internet Sync
+    // For Internet Sync
     username = username,
     email = email,
 
@@ -18,7 +18,7 @@ fun User.toEntity(): UserEntity = UserEntity(
     // For Room database
     id = 1,
 
-    //For Internet Sync
+    // For Internet Sync
     username = username,
     email = email,
 
