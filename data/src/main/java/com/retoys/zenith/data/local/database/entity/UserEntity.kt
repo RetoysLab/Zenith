@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "users")
 data class UserEntity(
     @PrimaryKey val id: Int,
-    //For Internet Sync
+    // For Internet Sync
     val username: String?,
     val email: String?,
 
