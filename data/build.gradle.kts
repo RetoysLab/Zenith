@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt)
 }
 
 android {
@@ -37,11 +36,6 @@ dependencies {
     // Unit Tests
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
-
-    // Hilt
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-    implementation(libs.androidx.hilt.navigation.compose)
 
     // Domain Layer
     implementation(project(":domain"))
