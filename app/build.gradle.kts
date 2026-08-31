@@ -48,6 +48,11 @@ dependencies {
     // Koin
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    // Koin Annotations
+    implementation(libs.koin.annotations)
+    // Koin Annotations KSP Compiler
+    ksp(libs.koin.ksp.compiler)
 
     // ViewModel
     implementation(libs.androidx.lifecycle.viewmodel.compose)
