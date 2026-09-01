@@ -1,6 +1,29 @@
 package com.retoys.zenith
 
-import android.app.Application
+import org.koin.core.annotation.ComponentScan
+import org.koin.core.annotation.Configuration
+import org.koin.core.annotation.KoinApplication
+import org.koin.core.annotation.Module
 
-@HiltAndroidApp
-class ZenithApplication : Application()
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+
+import com.retoys.zenith.startKoin
+
+@Module
+@Configuration
+@ComponentScan("com.retoys.zenith.data")
+class DataModule
+
+@Module
+@Configuration
+@ComponentScan("com.retoys.zenith.domain")
+class DomainModule
+
+@KoinApplication
+class ZenithApplication
+
+startKoin<ZenithApplication> {
+    androidLogger()
+    androidContext(this@ZenithApplication)
+}
