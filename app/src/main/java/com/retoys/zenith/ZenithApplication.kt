@@ -8,8 +8,6 @@ import org.koin.core.annotation.Module
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 
-import com.retoys.zenith.startKoin
-
 @Module
 @Configuration
 @ComponentScan("com.retoys.zenith.data")
